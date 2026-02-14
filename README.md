@@ -30,7 +30,7 @@ containing many properties, such as the country name and ISO codes.
 namespace App\Http\Controllers;
 
 //use Illuminate\Http\Request;
-use DivineOmega\LaravelGeolocationRequest\Http\Requests\GeolocationRequest as Request;
+use JordJD\LaravelGeolocationRequest\Http\Requests\GeolocationRequest as Request;
 
 class UserController extends Controller
 {

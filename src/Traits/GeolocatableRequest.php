@@ -1,11 +1,11 @@
 <?php
 
-namespace DivineOmega\LaravelGeolocationRequest\Traits;
+namespace JordJD\LaravelGeolocationRequest\Traits;
 
-use DivineOmega\Countries\Country;
-use DivineOmega\DOFileCachePSR6\CacheItemPool;
-use DivineOmega\Geolocation\Interfaces\LocationProviderInterface;
-use DivineOmega\Geolocation\Locator;
+use JordJD\Countries\Country;
+use JordJD\DOFileCachePSR6\CacheItemPool;
+use JordJD\Geolocation\Interfaces\LocationProviderInterface;
+use JordJD\Geolocation\Locator;
 
 trait GeolocatableRequest
 {
