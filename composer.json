@@ -21,7 +21,7 @@
     }
   },
   "replace": {
-    "jord-jd/laravel-geolocation-request": "self.version"
+    "divineomega/laravel-geolocation-request": "self.version"
   },
   "extra": {
     "branch-alias": {
