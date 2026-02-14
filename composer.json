@@ -1,23 +1,31 @@
 {
-    "name": "divineomega/laravel-geolocation-request",
-    "description": "Laravel Geolocation Request",
-    "type": "library",
-    "require": {
-        "php": ">=7.1",
-        "laravel/framework": "^5.6||^6.0||^7.0||^8.0",
-        "divineomega/php-geolocation": "^2.0",
-        "divineomega/do-file-cache-psr-6": "^2.0"
-    },
-    "license": "LGPL-3.0-only",
-    "authors": [
-        {
-            "name": "Jordan Hall",
-            "email": "jordan@hall05.co.uk"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "DivineOmega\\LaravelGeolocationRequest\\": "src/"
-        }
+  "name": "jord-jd/laravel-geolocation-request",
+  "description": "Laravel Geolocation Request",
+  "type": "library",
+  "require": {
+    "php": ">=7.1",
+    "laravel/framework": "^5.6||^6.0||^7.0||^8.0",
+    "divineomega/php-geolocation": "^2.0",
+    "divineomega/do-file-cache-psr-6": "^2.0"
+  },
+  "license": "LGPL-3.0-only",
+  "authors": [
+    {
+      "name": "Jordan Hall",
+      "email": "jordan@hall05.co.uk"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DivineOmega\\LaravelGeolocationRequest\\": "src/"
+    }
+  },
+  "replace": {
+    "jord-jd/laravel-geolocation-request": "self.version"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  }
 }

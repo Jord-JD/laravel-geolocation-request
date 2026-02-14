@@ -10,7 +10,7 @@ To install the Laravel Geolocation Request package, just
 run the following Composer command.
 
 ```bash
-composer require divineomega/laravel-geolocation-request
+composer require jord-jd/laravel-geolocation-request
 ``` 
 
 ## Usage
