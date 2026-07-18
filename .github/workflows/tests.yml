@@ -1,0 +1,32 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php-version: '8.1'
+            laravel-version: '^8.0'
+            composer-version: 'v2.2'
+          - php-version: '8.5'
+            laravel-version: '^13.0'
+            composer-version: 'latest'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer:${{ matrix.composer-version }}
+          coverage: none
+      - run: composer require --no-update "laravel/framework:${{ matrix.laravel-version }}"
+      - run: composer update --with-all-dependencies --no-interaction --prefer-dist --no-progress
+      - run: vendor/bin/phpunit
