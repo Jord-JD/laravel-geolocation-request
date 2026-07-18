@@ -1,5 +1,7 @@
 # Laravel Geolocation Request
 
+[![Tests](https://github.com/Jord-JD/laravel-geolocation-request/actions/workflows/tests.yml/badge.svg)](https://github.com/Jord-JD/laravel-geolocation-request/actions/workflows/tests.yml)
+
 The Laravel Geolocation Request package provides an easy
 way to geolocate requests to their country of origin, simply
 by calling a `$request->country()` method.
@@ -12,6 +14,8 @@ run the following Composer command.
 ```bash
 composer require jord-jd/laravel-geolocation-request
 ``` 
+
+Version 3 supports Laravel 8 through Laravel 13 on PHP 8.1 and newer. Laravel 13 requires PHP 8.3 or newer.
 
 ## Usage
 

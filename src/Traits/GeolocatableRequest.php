@@ -37,7 +37,7 @@ trait GeolocatableRequest
 
         $cacheItemPool = new CacheItemPool();
         $cacheItemPool->changeConfig([
-            'cacheDirectory' => __DIR__.'/../../cache/',
+            'cacheDirectory' => sys_get_temp_dir().'/jord-jd-laravel-geolocation-request/',
         ]);
 
         $locator->setCache($cacheItemPool);
@@ -61,16 +61,4 @@ trait GeolocatableRequest
         return $this->getLocator()->getCountryByIP($ip);
     }
 
-    /**
-     * Overrides the custom request object ip() method to look at the active request object.
-     *
-     * This is required because Laravel's custom request objects do not appear to have
-     * access to the IP address, or in fact, any server variables.
-     *
-     * @return string|null
-     */
-    public function ip()
-    {
-        return request()->ip();
-    }
 }
